@@ -2,7 +2,7 @@
 layout: lesson
 root: ../..
 title: Sets and Dictionaries
-level: novice
+level: intermediate
 ---
 Fan Fullerene has just joined Molecules'R'Us,
 a nanotechnology startup that fabricates molecules

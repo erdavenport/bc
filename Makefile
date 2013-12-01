@@ -25,7 +25,9 @@ MARKDOWN_SRC = \
 	$(wildcard bash/novice/*.md) \
 	$(wildcard git/novice/*.md) \
 	$(wildcard python/novice/*.md) \
-	$(wildcard sql/novice/*.md)
+	$(wildcard sql/novice/*.md) \
+	$(wildcard hash/intermediate/*.md) \
+	$(wildcard make/intermediate/*.md)
 MARKDOWN_DST = \
 	$(patsubst %.md,$(OUT)/%.html,$(MARKDOWN_SRC))
 
