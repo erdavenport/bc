@@ -4,6 +4,8 @@ root: ../..
 title: Sets and Dictionaries
 level: intermediate
 ---
+FIXME: convert from Markdown to IPython Notebook.
+
 Fan Fullerene has just joined Molecules'R'Us,
 a nanotechnology startup that fabricates molecules
 using only the highest quality atoms.
