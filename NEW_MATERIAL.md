@@ -3,35 +3,20 @@ layout: lesson
 root: .
 title: New Material
 ---
-<table class="table table-striped">
-  <tr>
-    <td></td>
-    <th>Novice</th>
-    <th>Intermediate</th>
-  </tr>
-  <tr>
-    <th>The Unix Shell</th>
-    <td><a href="./bash/novice/index.html">X</a></td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <th>Version Control with Git</th>
-    <td><a href="./git/novice/index.html">X</a></td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <th>Programming with Python</th>
-    <td><a href="./python/novice/index.html">X</a></td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <th>Programming with R</th>
-    <td>-</td>
-    <td>-</td>
-  </tr>
-  <tr>
-    <th>Using Databases and SQL</th>
-    <td><a href="./sql/novice/index.html">X</a></td>
-    <td>-</td>
-  </tr>
-</table>
+
+Novice
+------
+
+*   [The Unix Shell](bash/novice/index.html)
+*   [Version Control with Git](git/novice/index.html)
+*   [Programming with Python](python/novice/index.html)
+*   [Using Databases and SQL](sql/novice/index.html)
+
+Intermediate
+------------
+
+*   [Sets and Dictionaries](hash/intermediate/index.html)
+*   [Web Programming](web/intermediate/index.html)
+*   [Make](make/intermediate/index.html)
+*   [Object-Oriented Programming](oop/intermediate/index.html)
+*   [Regular Expressions](regex/intermediate/index.html)

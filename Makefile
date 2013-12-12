@@ -8,41 +8,42 @@ LINK_OUT = /tmp/bc-links
 BOOK = _book
 
 # Source Markdown pages.
-MARKDOWN_SRC = \
+MARKDOWN_SRC_2 = \
 	LICENSE.md \
 	NEW_MATERIAL.md \
 	bib.md \
 	gloss.md \
-	rules.md \
-	$(wildcard bash/novice/*.md) \
-	$(wildcard git/novice/*.md) \
-	$(wildcard python/novice/*.md) \
-	$(wildcard sql/novice/*.md)
+	$(wildcard hash/intermediate/*.md) \
+	$(wildcard web/intermediate/*.md) \
+	$(wildcard make/intermediate/*.md) \
+	$(wildcard oop/intermediate/*.md) \
+	$(wildcard regex/intermediate/*.md)
 
-NOTEBOOK_SRC = \
-	$(wildcard bash/novice/*.ipynb) \
-	$(wildcard git/novice/*.ipynb) \
-	$(wildcard python/novice/*.ipynb) \
-	$(wildcard sql/novice/*.ipynb)
+NOTEBOOK_SRC_2 = \
+	$(wildcard hash/intermediate/*.ipynb) \
+	$(wildcard web/intermediate/*.ipynb) \
+	$(wildcard oop/intermediate/*.ipynb) \
+	$(wildcard regex/intermediate/*.ipynb) \
+	$(wildcard make/intermediate/*.ipynb)
 
-NOTEBOOK_MD = \
-	$(patsubst %.ipynb,%.md,$(NOTEBOOK_SRC))
+NOTEBOOK_MD_2 = \
+	$(patsubst %.ipynb,%.md,$(NOTEBOOK_SRC_2))
 
-HTML_DST = \
-	$(patsubst %.md,$(OUT)/%.html,$(MARKDOWN_SRC)) \
-	$(patsubst %.md,$(OUT)/%.html,$(NOTEBOOK_MD))
+HTML_DST_2 = \
+	$(patsubst %.md,$(OUT)/%.html,$(MARKDOWN_SRC_2)) \
+	$(patsubst %.md,$(OUT)/%.html,$(NOTEBOOK_MD_2))
 
-BOOK_SRC = \
-	$(OUT)/bash/novice/index.html $(wildcard $(OUT)/bash/novice/*-*.html) \
-	$(OUT)/git/novice/index.html $(wildcard $(OUT)/git/novice/*-*.html) \
-	$(OUT)/python/novice/index.html $(wildcard $(OUT)/python/novice/*-*.html) \
-	$(OUT)/sql/novice/index.html $(wildcard $(OUT)/sql/novice/*-*.html) \
+BOOK_SRC_2 = \
+	$(OUT)/hash/intermediate/index.html $(wildcard $(OUT)/hash/intermediate/*-*.html) \
+	$(OUT)/web/intermediate/index.html $(wildcard $(OUT)/web/intermediate/*-*.html) \
+	$(OUT)/oop/intermediate/index.html $(wildcard $(OUT)/oop/intermediate/*-*.html) \
+	$(OUT)/regex/intermediate/index.html $(wildcard $(OUT)/regex/intermediate/*-*.html) \
+	$(OUT)/make/intermediate/index.html $(wildcard $(OUT)/make/intermediate/*-*.html) \
 	$(OUT)/bib.html \
 	$(OUT)/gloss.html \
-	$(OUT)/rules.html \
 	$(OUT)/LICENSE.html
 
-.SECONDARY : $(NOTEBOOK_MD)
+.SECONDARY : $(NOTEBOOK_MD_2)
 
 #-----------------------------------------------------------
 
@@ -53,7 +54,7 @@ all : commands
 check : $(OUT)/index.html
 
 # Build HTML versions of Markdown source files using Jekyll.
-$(OUT)/index.html : $(MARKDOWN_SRC) $(NOTEBOOK_MD)
+$(OUT)/index.html : $(MARKDOWN_SRC_2) $(NOTEBOOK_MD_2)
 	jekyll -t build -d $(OUT)
 	mv $(OUT)/NEW_MATERIAL.html $(OUT)/index.html
 
@@ -63,7 +64,7 @@ $(OUT)/index.html : $(MARKDOWN_SRC) $(NOTEBOOK_MD)
 
 book : book.html
 
-book.html : $(BOOK_SRC)
+book.html : $(BOOK_SRC_2)
 	python bin/make-book.py $^ > $@
 
 #-----------------------------------------------------------
