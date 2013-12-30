@@ -350,7 +350,7 @@
       most of us use windows, icons, mice, and pointers.
       These technologies didn't become widespread until the 1980s,
       but their roots go back to Doug Engelbart's work in the 1960s,
-      which you can see in what has been called
+      which you can see in what has been called <!-- ED: This link doesn't work for me :(!-->
       <a href="http://video.google.com/videoplay?docid=-8734787622017763097#">The Mother of All Demos</a>.</p>
 
     <p>Going back even further,
@@ -442,7 +442,7 @@
       To start exploring them,
       let's log in to the computer by typing our user ID and password.
       Most systems will print stars to obscure the password,
-      or nothing at all,
+      or nothing at all, <!-- ED: What do you mean here by log into the computer? Do you mean open up an instance of BASH either on a terminal or whatever windows people use? If I were a total noob I think this would be a bit confusing for me, how to even open a command line program. !-->
       in case some evildoer is shoulder surfing behind us:</p>
 
 <pre>login: <span class="in">vlad</span>
@@ -794,7 +794,7 @@ $</pre>
         <li><code>/</code> on its own is the root directory of the whole filesystem.</li>
         <li>A relative path specifies a location starting from the current location.</li>
         <li>An absolute path specifies a location from the root of the filesystem.</li>
-        <li>Directory names in a path are separated with '/' on Unix, but '' on Windows.</li>
+        <li>Directory names in a path are separated with '/' on Unix, but '' on Windows.</li> <!-- ED: Are you missing a slash inbetween the '' for Windows?!-->
         <li>'..' means "the directory above the current one";
           '.' on its own means "the current directory".</li>
         <li>Most files' names are <code>something.extension</code>.
@@ -830,7 +830,7 @@ $</pre>
 
           <ol>
             <li><code>ls pwd</code></li>
-            <li><code>ls -r -F</code></li>
+            <li><code>ls -r -F</code></li> <!-- ED: you didn't actually cover -r yet, or man so people can't look it up without googling what that means!-->
             <li><code>ls -r -F /users/backup</code></li>
             <li>Either #2 or #3 above, but not #1.</li>
           </ol>
@@ -926,7 +926,7 @@ $ <span class="in">nano draft.txt</span></pre>
 
     <p>Let's type in a few lines of text,
       then use Control-O to write our data to disk:</p>
-
+<!-- ED: stupid comment: the name you opened up nano with in the instructions was "draft" and the name in this screenshot is "junk"!-->
     <p><img src="bash/novice/img/nano-screenshot.png" alt="Nano in Action" /></p>
 
     <p>Once our file is saved,
@@ -1140,7 +1140,7 @@ $</pre>
         <li><code>cp old new</code> copies a file.</li>
         <li><code>mv old new</code> moves (renames) a file or directory.</li>
         <li><code>nano</code> is a very simple text editor&mdash;please use something else for real work.</li>
-        <li><code>touch path</code> creates an empty file if it doesn't already exist.</li>
+        <li><code>touch path</code> creates an empty file if it doesn't already exist.</li> <!-- ED: did you mean to cover touch in the materials?!-->
         <li><code>rm path</code> removes (deletes) a file.</li>
         <li><code>rmdir path</code> removes (deletes) an empty directory.</li>
       </ul>
@@ -2256,7 +2256,7 @@ $</pre>
 <pre># List files sorted by number of lines.
 wc -l $* | sort -n</pre>
 
-    <p>you don't have to puzzle it out&mdash;the comment at the top tells you what it does.
+    <p>you don't have to puzzle it out&mdash;the comment at the top tells you what it does. <!-- ED: This is the first time you talk about commenting. It may be worth spelling out what the hash character is and also link to the definition at the end of the document.!-->
       A line or two of documentation like this make it much easier for other people
       (including your future self)
       to re-use your work.
@@ -2289,7 +2289,7 @@ wc -l $* | sort -n</pre>
       <h3>Unnumbering</h3>
 
       <p>Nelle could also use <code>colrm</code> (short for "column removal") to remove the
-        serial numbers on her previous commands.</p>
+        serial numbers on her previous commands.</p> <!-- ED: it might be worth listing out an example of how you would use that command.!--> 
 
     </blockquote>
 
@@ -2462,7 +2462,7 @@ done</pre>
 
     <p><code>grep</code> finds and prints lines in files that match a pattern.
       For our examples,
-      we will use a file that contains three haikus taken from a
+      we will use a file that contains three haikus taken from a <!-- ED: the following link doesn't work for me :(!-->
       <a href="http://www.salonmagazine.com/21st/chal/1998/01/26chal.html">1998 competition in Salon magazine</a>:</p>
 
 <pre>The Tao that is seen
@@ -2773,9 +2773,9 @@ $</pre>
     <div class="keypoints">
       <h3>Key Points</h3>
       <ul>
-        <li>Everything is stored as bytes, but the bytes in binary files do not represent characters.</li>
-        <li>Use nested loops to run commands for every combination of two lists of things.</li>
-        <li>Use <code>\</code> to break one logical line into several physical lines.</li>
+        <li>Everything is stored as bytes, but the bytes in binary files do not represent characters.</li> <!-- ED: binary wasn't covered very much. Is a key point in this section really to know what bytes are in text versus binary files?!-->
+        <li>Use nested loops to run commands for every combination of two lists of things.</li> <!-- ED: this point seems like it should go in an earlier section.!-->
+        <li>Use <code>\</code> to break one logical line into several physical lines.</li> <!-- ED: I don't remember this being covered in this lesson material.!-->
         <li>Use parentheses <code>()</code> to keep things combined.</li>
         <li>Use <code>$(command)</code> to insert a command's output in place.</li>
         <li><code>find</code> finds files with specific properties that match patterns.</li>
@@ -4041,7 +4041,7 @@ Greg Wilson: "Software Carpentry: Lessons Learned". arXiv:1307.5448, July 2013.
 
     <p>In order to load the data,
       we need to <a href="#gloss:import">import</a> a library called NumPy
-      that knows how to operate on matrices:</p>
+      that knows how to operate on matrices:</p> <!-- ED: perhaps you might want to start even more basic? How do you open a python instance? Even if you just include a link perhaps?!-->
 
 <pre><span class="in">import numpy</span></pre>
 
@@ -4396,7 +4396,7 @@ pyplot.show()</span></pre>
 
     <p><img src="python/novice/img/max-inflammation-over-time.png" alt="Maximum Inflammation per Day" /></p>
 
-    <p><img src="python/novice/img/min-inflammation-over-time.png" alt="Minimum Inflammation per Day" /></p>
+    <p><img src="python/novice/img/min-inflammation-over-time.png" alt="Minimum Inflammation per Day" /></p> <!-- ED: This image link is broken for me!-->
 
     <p>The maximum value rises and falls perfectly smoothly,
       while the minimum seems to be a step function.
@@ -4445,7 +4445,7 @@ plt.show()</span></pre>
       and that we want a tight layout.
       (Perversely,
       if we leave out that call on line 20,
-      the layout will actually be squeezed more than with it.)</p>
+      the layout will actually be squeezed more than with it.)</p> <!-- ED: there aren't any line numbers to follow, so maybe there's a better way to describe the call on line 20?!-->
 
     <div class="keypoints">
       <h3>Key Points</h3>
@@ -4509,7 +4509,7 @@ last three characters: gen</span></pre>
           explain what <code>element[1:-1]</code> does.
         </li>
         <li>
-          The expression <code>element[3:3]</code> produces an <a href="../../gloss.html#empty-string">empty string</a>,
+          The expression <code>element[3:3]</code> produces an <a href="../../gloss.html#empty-string">empty string</a>, <!-- ED: this link is broken!-->
           i.e., a string that contains no characters.
           If <code>data</code> holds our array of patient data,
           what does <code>data[3:3, 4:4]</code> produce?
@@ -4673,7 +4673,7 @@ final = fahr_to_celsius(original)</span></pre>
     <p><img src="python/novice/img/python-call-stack-01.svg" alt="Call Stack (Initial State)" /></p>
 
     <p>When we call <code>fahr_to_celsius</code>,
-      Python <em>doesn't</em> create the variable <code>temp</code> right away.
+      Python <em>doesn't</em> create the variable <code>temp</code> right away. <!-- ED: Why would we expect the computer to make a variable temp at all? The user didn't ask the computer to do that in their commands? Oh wait, I think I was reading temp as like temporary, like the computer was generating a temporary variable, but now I see that it's actually referring to tempin the functions you generated above. Sorry for the confusion, but I'm leaving this comment here just in case others might find that confusing too.!-->
       Instead,
       it creates something called a <a href="#gloss:stack-frame">stack frame</a>
       to keep track of the variables defined by <code>fahr_to_kelvin</code>.
@@ -5094,7 +5094,7 @@ but the most important part is the first couple of lines:</p>
         </li>
         <li>
           Write a function called <code>analyze</code> that takes a filename as a parameter
-          and displays the three graphs produced in the <a href="01-numpy.ipynb">previous section</a>,
+          and displays the three graphs produced in the <a href="01-numpy.ipynb">previous section</a>, <!-- ED: this link is broken for me.!-->
           i.e., <code>analyze('inflammation-01.csv')</code> should produce the graphs already shown,
           while <code>analyze('inflammation-02.csv')</code> should produce corresponding graphs
           for the second data set.
@@ -5345,7 +5345,7 @@ TypeError: 'str' object does not support item assignment</span></pre>
       while one that cannot be is called <a href="#gloss:immutable">immutable</a>.
       There are many ways to change the values in lists besides assigning to elements:</p>
 
-<pre><span class="in">odds.append(11)
+<pre><span class="in">odds.append(11) <!--ED: it may be worth explaining how to see all of the methods here?!-->
 print 'odds after adding a value:', odds</span>
 <span class="out">odds after adding a value: [1, 3, 5, 7, 11]</span>
 <span class="in">del odds[0]
@@ -6200,13 +6200,13 @@ AssertionError: Calculated upper Y coordinate invalid</span></pre>
       that their understanding matches what the code is doing.</p>
 
     <p>Most good programmers follow two rules when adding assertions to their code.
-      The first is, <a href="#rule:fail-early-fail-often">fail early, fail often</a>.
+      The first is, <a href="#rule:fail-early-fail-often">fail early, fail often</a>. <!-- ED: this link is broken for me!-->
       The greater the distance between when and where an error occurs and when it's
       noticed,
       the harder the error will be to debug,
       so good code catches mistakes as early as possible.</p>
 
-    <p>The second rule is, <a href="#rule:turn-bugs-into-assertions-or-tests">turn bugs into assertions or tests</a>.
+    <p>The second rule is, <a href="#rule:turn-bugs-into-assertions-or-tests">turn bugs into assertions or tests</a>. <!-- ED: this link is also broken for me!-->
       If you made a mistake in a piece of code,
       the odds are good that you have made other mistakes nearby,
       or will make the same mistake (or a related one)
@@ -6402,7 +6402,7 @@ AssertionError:</span></pre>
       respectively,
       regardless of the input values.
       This violates another important rule of programming:
-      <a href="#rule:always-initialize-from-data">always initialize from data</a>.
+      <a href="#rule:always-initialize-from-data">always initialize from data</a>. <!-- ED: this link is broken for me!-->
       We'll leave it as an exercise to fix <code>range_overlap</code>.</p>
 
     <h3>Debugging</h3>
@@ -6420,7 +6420,7 @@ AssertionError:</span></pre>
     <h4>Know What It's Supposed to Do</h4>
 
     <p>The first step in debugging something is to
-      <a href="#rule:know-what-its-supposed-to-do">know what it's supposed to do</a>.
+      <a href="#rule:know-what-its-supposed-to-do">know what it's supposed to do</a>. <!-- ED: this link is broken for me!-->
       "My program doesn't work" isn't good enough:
       in order to diagnose and fix problems,
       we need to be able to tell correct output from incorrect.
@@ -6489,7 +6489,7 @@ AssertionError:</span></pre>
         Data analysts frequently use simple visualizations to check both
         the science they're doing
         and the correctness of their code
-        (just as we did in the <a href="01-numpy.html">opening lesson</a> of this tutorial).
+        (just as we did in the <a href="01-numpy.html">opening lesson</a> of this tutorial). <! -- ED: this link is broken for me!-->
         This should only be used for debugging as a last resort,
         though,
         since it's very hard to compare two visualizations automatically.
@@ -6500,7 +6500,7 @@ AssertionError:</span></pre>
 
     <p>We can only debug something when it fails,
       so the second step is always to find a test case that
-      <a href="#rule:make-it-fail-every-time">makes it fail every time</a>.
+      <a href="#rule:make-it-fail-every-time">makes it fail every time</a>. <!-- ED: this link is broken for me!-->
       The "every time" part is important because
       few things are more frustrating than debugging an intermittent problem:
       if we have to call a function a dozen times to get a single failure,
@@ -6528,7 +6528,7 @@ AssertionError:</span></pre>
       we're also more likely to be distracted by other things as we wait for our
       program to fail,
       which means the time we <em>are</em> spending on the problem is less focused.
-      It's therefore critical to <a href="#rule:make-it-fail-fast">make it fail fast</a>.</p>
+      It's therefore critical to <a href="#rule:make-it-fail-fast">make it fail fast</a>.</p> <!-- ED: another broken link!-->
 
     <p>As well as making the program fail fast in time,
       we want to make it fail fast in space,
@@ -6560,7 +6560,7 @@ AssertionError:</span></pre>
       if you got it wrong the first time,
       you'll probably get it wrong the second and third as well.)
       Good programmers therefore
-      <a href="#rule:change-one-thing-at-a-time">change one thing at a time, for a reason</a>
+      <a href="#rule:change-one-thing-at-a-time">change one thing at a time, for a reason</a> <!-- ED: broken link!-->
       They are either trying to gather more information
       ("is the bug still there if we change the order of the loops?")
       or test a fix
@@ -6585,7 +6585,7 @@ AssertionError:</span></pre>
       or running ones whose results won't be interesting.
       Similarly,
       debugging works best when we
-      <a href="#rule:keep-track-of-what-youve-done">keep track of what we've done</a>
+      <a href="#rule:keep-track-of-what-youve-done">keep track of what we've done</a> <!--ED: broken link!-->
       and how well it worked.
       If we find ourselves asking,
       "Did left followed by right with an odd number of lines cause the crash?
@@ -6604,7 +6604,7 @@ AssertionError:</span></pre>
 
     <p>And speaking of help:
       if we can't find a bug in 10 minutes,
-      we should <a href="#rule:be-humble">be humble</a> and ask for help.
+      we should <a href="#rule:be-humble">be humble</a> and ask for help. <!--ED: broken link!-->
       Just explaining the problem aloud is often useful,
       since hearing what we're thinking helps us spot inconsistencies and hidden
       assumptions.</p>
@@ -6628,7 +6628,7 @@ AssertionError:</span></pre>
 
     <p>And that is what makes us most productive in the long run.
       As the saying goes,
-      <a href="#rule:week-hard-work-hour-thought">A week of hard work can sometimes save you an hour of thought</a>.
+      <a href="#rule:week-hard-work-hour-thought">A week of hard work can sometimes save you an hour of thought</a>. <!--ED: broken link!-->
       If we train ourselves to avoid making some kinds of mistakes,
       to break our code into modular, testable chunks,
       and to turn every assumption (or mistake) into an assertion,
@@ -6880,7 +6880,7 @@ $ <span class="in">ipython readings-02.py small-01.csv</span>
       we can see that our program is calculating the mean correctly for each line,
       whereas we were really taking it on faith before.
       This is yet another rule of programming:
-      <a href="#rule:>test-simple-first">test the simple things first</a>.</p>
+      <a href="#rule:>test-simple-first">test the simple things first</a>.</p> <!--ED: broken link!-->
 
     <p>We want our program to process each file separately,
       so we need a loop that executes once for each filename.
